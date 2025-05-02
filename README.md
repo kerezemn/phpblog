@@ -4,23 +4,37 @@ Kerem Özen B241210057 - Bilgisayar Mühendisliği 1. Sınıf A grubu
 ## Tech stack
 php(8.1.2) - sqlite3 - bootstrap
 
+## Database
+'db.sqlite3' Dosyası şu şekilde oluşturuluyor: 
+
+`CREATE TABLE IF NOT EXISTS contact_messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ad TEXT,
+    soyad TEXT,
+    email TEXT,
+    tel TEXT,
+    konu TEXT,
+    mesaj TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)`
+
 ## File structure
 ### index.php
-Route'lari manage eden dosya. Aynı zamanda template'ler için global değişkenleri import ediyor.
+Route'lari manage eden dosya. Aynı zamanda template'ler için ana değişkenleri ve fonksiyonları (auth.php'dekiler gibi) import ediyor.
 
 ### auth.php
 Session check'leri yapan fonksiyonlar ve değişkenler barındırıyor.
 
 ### icons/
-SVG'lerimi color olarak currentColor kullandığı için (bu hover effecti sağlıyor ve static değil)\
+SVG'lerimi color olarak currentColor kullandığı için (bu hover effecti sağlıyor ve static değil)
 bu klasöre yerleştirdim ve php kısmında bu svgleri inline olarak HTML'ye gömdüm.
 
 ### static/
-Static dosyalarım.
+Static dosyalar.
 
 ### views/
-Template'lerim.
+Template'ler. 'layout.php' dosyası diğer template'ler tarafından extends'leniyor. Bu şekilde DRY prensibine uyumlu bir yapı sunuluyor.
 
 ## Running server
-WSL ortamında Ubuntu 22.04 kullanarak sunucumu çalıştırdım.
+WSL2 ortamında Ubuntu 22.04 kullanarak sunucumu çalıştırdım.
 >php -S ip:port

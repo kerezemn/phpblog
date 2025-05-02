@@ -20,7 +20,23 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a class="nav-link <?= ($page === 'home' ? 'active' : '') ?>" href="/">Hakkımda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($page === 'cv' ? 'active' : '') ?>" href="/">CV</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link <?= ($page === 'contact' ? 'active' : '') ?>" href="/contact">İletişim</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($page === 'my_city' ? 'active' : '') ?>" href="/my-city">Şehrim</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($page === 'harage' ? 'active' : '') ?>" href="/contact">Mirasımız</a>
                     </li>
                 </ul>
 

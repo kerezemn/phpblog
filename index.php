@@ -5,18 +5,20 @@ require 'auth.php';
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($uri) {
-    case '/logout':
-        logout();
-
     case '/':
         $page = 'home';
-        $title = 'Ana sayfa';
+        $title = 'Hakkımda';
         break;
     
     case '/login':
         $page = 'login';
         $title = 'Giriş yap';
         break;
+    
+    case '/logout':
+        logout();
+        header("Location: /", true, 301);
+        exit;
     
     case '/about':
         $page = 'about';
@@ -26,6 +28,16 @@ switch($uri) {
     case '/contact':
         $page = 'contact';
         $title = 'İletişim';
+        break;
+    
+    case '/my-city':
+        $page = 'my_city';
+        $title = 'Şehrim';
+        break;
+    
+    case '/heritage':
+        $page = 'heritage';
+        $title = "Mirasımız";
         break;
 
     default:
