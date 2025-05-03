@@ -20,11 +20,11 @@ switch($uri) {
         header("Location: /", true, 301);
         exit;
     
-    case '/about':
-        $page = 'about';
-        $view = __DIR__ . '/views/home.php';
+    case '/cv':
+        $page = 'cv';
+        $title = "CV";
         break;
-    
+
     case '/contact':
         $page = 'contact';
         $title = 'İletişim';
@@ -38,6 +38,11 @@ switch($uri) {
     case '/heritage':
         $page = 'heritage';
         $title = "Mirasımız";
+        break;
+    
+    case '/admin':
+        $page = 'admin';
+        $title = "Admin sayfası";
         break;
 
     default:

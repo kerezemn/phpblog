@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $konu  = $_POST['konu'] ?? '';
     $mesaj = $_POST['mesaj'] ?? '';
 
-    // Basit validation (dilersen genişletebilirsin)
+    // TODO: sql injection?
     if ($ad && $soyad && $email && $mesaj) {
         $stmt = $db->prepare("INSERT INTO contact_messages (ad, soyad, email, tel, konu, mesaj)
                               VALUES (:ad, :soyad, :email, :tel, :konu, :mesaj)");
@@ -31,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container mt-3">
     <form method="POST" class="mt-4">
         <div class="card shadow-lg">
-            <div class="card-header bg-info-subtle">
-                <h5 class="card-title text-center">İletişim Formu</h5>
+            <div class="card-header bg-primary text-light">
+                <h5 class="card-title">İletişim Formu</h5>
             </div>
 
             <div class="card-body">
