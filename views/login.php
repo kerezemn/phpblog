@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
 
-        header('Location: /dashboard.php', true, 301);
+        header('Location: /admin', true, 301);
         exit;
     } 
     else {
