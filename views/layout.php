@@ -36,7 +36,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($page === 'harage' ? 'active' : '') ?>" href="/contact">Mirasımız</a>
+                        <a class="nav-link <?= ($page === 'my_team' ? 'active' : '') ?>" href="/my-team">Takımım</a>
                     </li>
                 </ul>
 

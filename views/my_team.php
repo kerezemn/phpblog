@@ -2,37 +2,8 @@
     <h2 class="text-center mb-4">Beşiktaş JK</h2>
     <hr>
 
-    <div class="container" style="max-width: 800px;">
-        <div id="teamSlider" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="#tarihce">
-                        <img src="static/my_team/tarihce.jpg" class="d-block w-100 rounded" alt="Tarihçe">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#stad">
-                        <img src="static/my_team/stad.jpg" class="d-block w-100 rounded" alt="Stadyum">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#basarilar">
-                        <img src="static/my_team/basarilar.jpg" class="d-block w-100 rounded" alt="Başarılar">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#taraftar">
-                        <img src="static/my_team/taraftar.jpg" class="d-block w-100 rounded" alt="Taraftar Kültürü">
-                    </a>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#teamSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#teamSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+    <div class="container" style="max-width: 320px;">
+        <img src="static/my_team/logo.png">
     </div>
 
     <hr>

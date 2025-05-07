@@ -35,9 +35,9 @@ switch($uri) {
         $title = 'Şehrim';
         break;
     
-    case '/heritage':
-        $page = 'heritage';
-        $title = "Mirasımız";
+    case '/my-team':
+        $page = 'my_team';
+        $title = "Takımım";
         break;
     
     case '/admin':
