@@ -38,3 +38,5 @@ Template'ler. 'layout.php' dosyası diğer template'ler tarafından extends'leni
 ## Running server
 WSL2 ortamında Ubuntu 22.04 kullanarak sunucumu çalıştırdım.
 >php -S ip:port
+
+### Endpoints
