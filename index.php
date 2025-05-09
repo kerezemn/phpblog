@@ -30,6 +30,11 @@ switch($uri) {
         $title = 'İletişim';
         break;
     
+    case '/contact/success':
+        $page = 'contact_success';
+        $title = "Form gönderildi";
+        break;
+    
     case '/my-city':
         $page = 'my_city';
         $title = 'Şehrim';
@@ -38,6 +43,11 @@ switch($uri) {
     case '/my-team':
         $page = 'my_team';
         $title = "Takımım";
+        break;
+    
+    case '/my-interests':
+        $page = 'my_interests';
+        $title = "İlgi alanlarım";
         break;
     
     case '/admin':

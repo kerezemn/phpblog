@@ -1,4 +1,4 @@
-<div class="container my-5">
+<div class="container mt-3">
     <h2 class="text-center mb-4">İstanbul</h1>
     <hr>
 

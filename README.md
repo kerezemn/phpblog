@@ -40,3 +40,11 @@ WSL2 ortamında Ubuntu 22.04 kullanarak sunucumu çalıştırdım.
 >php -S ip:port
 
 ### Endpoints
+
+## /
+Hakkımda sayfası
+
+## /cv
+CV Sayfası
+
+## 

@@ -15,7 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($ad && $soyad && $email && $mesaj) {
         $stmt = $db->prepare("INSERT INTO contact_messages (ad, soyad, email, tel, konu, mesaj)
                             VALUES (:ad, :soyad, :email, :tel, :konu, :mesaj)");
-        $stmt->execute([
+
+        $result = $stmt->execute([
             ':ad'    => $ad,
             ':soyad' => $soyad,
             ':email' => $email,
@@ -23,6 +24,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':konu'  => $konu,
             ':mesaj' => $mesaj
         ]);
+
+        if ($result) {
+            // if success, save session
+            $_SESSION['contact_form'] = [
+                'ad'    => $ad,
+                'soyad' => $soyad,
+                'email' => $email,
+                'tel'   => $tel,
+                'konu'  => $konu,
+                'mesaj' => $mesaj,
+            ];
+
+            header('Location: contact/success');
+            exit;
+        };
     }
 }
 ?>
@@ -81,8 +97,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div v-if="errors.mesaj" class="text-danger">{{ errors.mesaj }}</div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Gönder</button>
-            </div>
+                <div>
+                    <button type="submit" class="btn btn-primary me-2">Gönder</button>
+                    <button type="button" class="btn btn-danger" @click="clearForm">Temizle</button>
+                </div>
+             </div>
         </div>
     </form>
 </div>
@@ -138,13 +157,29 @@ createApp({
         };
     };
 
+    const clearForm = () => {
+        form.value = {
+            ad: '',
+            soyad: '',
+            email: '',
+            tel: '',
+            konu: 'Öneri',
+            mesaj: '',
+        };
+
+        errors.value = {};
+    };
+
     return {
         form,
         errors,
         handleSubmit,
-        iletisimForm
+        iletisimForm,
+        clearForm,
     };
   }
 }).mount('#app');
+
+
 </script>
 
