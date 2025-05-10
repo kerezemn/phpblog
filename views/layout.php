@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kblog | <?= $title ?></title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -37,6 +38,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($page === 'my_team' ? 'active' : '') ?>" href="/my-team">Takımım</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($page === 'my_interests' ? 'active' : '') ?>" href="/my-interests">İlgi alanlarım</a>
                     </li>
                 </ul>
 
