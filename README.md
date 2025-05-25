@@ -4,7 +4,7 @@ Public git repo: https://https://github.com/kerezemn/phpblog \
 Live at: https://kblog.rf.gd
 
 ## Tech stack
-php(8.1.2) - sqlite3 - bootstrap
+php(8.1.2) - sqlite3 - javascript (vue.js) - bootstrap
 
 ## Database
 'db.sqlite3' Dosyası şu şekilde oluşturuluyor: 
