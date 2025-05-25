@@ -1,6 +1,7 @@
 ## Author
 Kerem Özen B241210057 - Bilgisayar Mühendisliği 1. Sınıf A grubu
 Public git repo: https://https://github.com/kerezemn/phpblog
+Live at: https://kblog.rf.gd
 
 ## Tech stack
 php(8.1.2) - sqlite3 - bootstrap
