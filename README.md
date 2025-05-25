@@ -1,5 +1,6 @@
 ## Author
 Kerem Özen B241210057 - Bilgisayar Mühendisliği 1. Sınıf A grubu
+Public git repo: https://https://github.com/kerezemn/phpblog
 
 ## Tech stack
 php(8.1.2) - sqlite3 - bootstrap
@@ -39,12 +40,33 @@ Template'ler. 'layout.php' dosyası diğer template'ler tarafından extends'leni
 WSL2 ortamında Ubuntu 22.04 kullanarak sunucumu çalıştırdım.
 >php -S ip:port
 
-### Endpoints
+Ardından infinityfree'de hostlattım (tek php ile view kullandığım için .htaccess yazmam gerekti)
 
-## /
-Hakkımda sayfası
+## Notes
+İletişim formu gönderdikten sonra formu göstermeyi yanlışlıkla admin panel yapmam gerek olarak algıladım ve giriş yapan kullanıcı için yollanan contact formlarını table şeklinde gösteren admin panel yaptım.
 
-## /cv
-CV Sayfası
+## Endpoints
 
-## 
+### /
+![hakkimda ss](/examples/home.png)
+
+### /cv
+![cv ss](/examples/cv.png)
+
+### /contact
+![contact ss](/examples/contact.png)
+
+### /my-city
+![my city ss](/examples/city.png)
+
+### /my-team
+![my team ss](/examples/team.png)
+
+### /my-interests
+![my interests ss](/examples/interests.png)
+
+### /login
+![login ss](/examples/login.png)
+
+### /admin
+![admin ss](/examples/admin.png)
